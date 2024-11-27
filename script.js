@@ -55,6 +55,10 @@ const trains = [
  [normalize("b7"), normalize("m7"), normalize("s7")],
 ]
 
+document.addEventListener("click", () =>
+ document.fullscreenElement ? null : document.documentElement.requestFullscreen()
+)
+
 setTimeout(() => {
  announcement.innerHTML = redsTurn ? `RED ${redCount}` : `BLUE ${blueCount}`
  spaces.forEach((space) => space.addEventListener("click", handleSpaceClick))
